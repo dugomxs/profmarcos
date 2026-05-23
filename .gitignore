@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude Code
+.agents/
+.claude/
+skills-lock.json
+
+# Pastas de trabalho internas
+Arquivos/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Ambiente
+.env
+.env.local

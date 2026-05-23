@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Substitua SEU-DOMINIO.netlify.app pelo domínio real após publicar
+Sitemap: https://SEU-DOMINIO.netlify.app/sitemap.xml
