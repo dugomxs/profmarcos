@@ -17,11 +17,13 @@ syncNav();
    ============================================================ */
 const hamburger = document.getElementById('hamburger');
 const navMenu   = document.getElementById('nav-menu');
+const backdrop  = document.getElementById('nav-backdrop');
 const navLinks  = navMenu.querySelectorAll('.nav__link');
 
 function closeMenu() {
   hamburger.classList.remove('open');
   navMenu.classList.remove('open');
+  backdrop.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
@@ -30,15 +32,13 @@ hamburger.addEventListener('click', () => {
   const opening = !navMenu.classList.contains('open');
   hamburger.classList.toggle('open');
   navMenu.classList.toggle('open');
+  backdrop.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', String(opening));
   document.body.style.overflow = opening ? 'hidden' : '';
 });
 
 navLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-document.addEventListener('click', e => {
-  if (!nav.contains(e.target)) closeMenu();
-});
+backdrop.addEventListener('click', closeMenu);
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeMenu();
