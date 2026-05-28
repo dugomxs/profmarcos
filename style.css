@@ -224,16 +224,16 @@ button { font-family: inherit; }
 
 /* Backdrop */
 .nav__backdrop {
-  display: none;
+  visibility: hidden;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.55);
   z-index: 99;
   opacity: 0;
-  transition: opacity .3s ease;
+  transition: opacity .3s ease, visibility .3s ease;
 }
 .nav__backdrop.open {
-  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -362,9 +362,13 @@ button { font-family: inherit; }
   /* Slogan — subtítulo secundário, visivelmente menor que o título */
   .hero__slogan { font-size: clamp(.9rem, 4vw, 1.0625rem); line-height: 1.4; margin-bottom: 1.5rem; padding-left: .875rem; }
 }
-/* Desktop: empurra imagem para a direita — face fica no lado direito da tela */
+/* Desktop: empurra imagem para a direita aumentando a escala horizontal */
 @media (min-width: 768px) {
-  .hero__img { object-position: 0% 25%; }
+  .hero__img { 
+    width: 116%; 
+    max-width: none;
+    object-position: 0% 25%; 
+  }
 }
 .hero__overlay {
   position: absolute;

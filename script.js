@@ -66,10 +66,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if (typeof gsap !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  // Desktop: desloca imagem para a direita — rosto sai de trás do texto
-  if (window.innerWidth >= 768) {
-    gsap.set('.hero__img', { xPercent: 14 });
-  }
+
 
   /* ----------------------------------------------------------
      HERO — entrada encadeada
