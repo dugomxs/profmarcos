@@ -1295,6 +1295,19 @@ button { font-family: inherit; }
   font-size: .875rem;
   padding: .65rem 1.25rem;
 }
+.footer__cta--secondary {
+  margin-top: .625rem;
+  background: transparent;
+  color: #25D366;
+  border: 1.5px solid rgba(37,211,102,.5);
+}
+.footer__cta--secondary:hover {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,211,102,.35);
+}
 
 /* Coluna navegação */
 .footer__col-title {
